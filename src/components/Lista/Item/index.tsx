@@ -1,9 +1,11 @@
 import style from '../Lista.module.scss'
-export default function Item(props: { tarefa: string, tempo: string }) {
+import { ITarefa } from '../../../types/tarefa'
+
+export default function Item({ tarefa, tempo, selecionado, completado, id }: ITarefa) {
     return (
         <li className={style.item}>
-            <h3>{props.tarefa}</h3>
-            <span>{props.tempo}</span>
+            <h3>{tarefa}</h3>
+            <span>{tempo}</span>
         </li>
     )
 }
